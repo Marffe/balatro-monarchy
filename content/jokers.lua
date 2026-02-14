@@ -64,3 +64,19 @@ local joker_list = {
 for _, filename in ipairs(joker_list) do
     assert(SMODS.load_file('content/jokers/'..filename..'.lua'), string.format('monarchy - Error found in %s.lua', filename))()
 end
+
+Monarchy.reset_game_globals = function(initial)
+    if initial then
+        G.GAME.Monarchy = {
+            joker_values = {
+                vespertine_hand_count = 0
+            }
+        }
+    end
+end
+
+Monarchy.calculate = function(self, context)
+    if context.after then
+        G.GAME.Monarchy.joker_values.vespertine_hand_count = #context.scoring_hand
+    end
+end

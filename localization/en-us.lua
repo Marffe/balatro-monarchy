@@ -312,6 +312,15 @@ local descriptions = {
                 'for the next shop'
             }
         },
+        vespertine = {
+            name = 'Vespertine',
+            text = {
+                'This Joker gives {C:mult}+#1#{} Mult',
+                'for each {C:attention}scoring card{}',
+                'in the last hand',
+                '{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)'
+            }
+        },
         walkman = {
             name = 'Walkman',
             text = {
