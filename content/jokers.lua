@@ -52,6 +52,7 @@ local joker_list = {
     'shattered',
     'subway_map',
     'gutshot',
+    'gold_cables',
 
     'walkman',
     'defragment',

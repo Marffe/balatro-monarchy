@@ -126,6 +126,13 @@ local descriptions = {
                 '{C:inactive}(Currently {C:blue}+#1#{C:inactive})'
             }
         },
+        gold_cables = {
+            name = 'Gold Plated Cables',
+            text = {
+                'Retrigger all {C:attention}scored cards{}',
+                'adjacent to a {C:attention}#1#'
+            }
+        },
         gummy_bears = {
             name = 'Gummy Bears',
             text = {
