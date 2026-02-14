@@ -242,6 +242,13 @@ local descriptions = {
                 'of being {C:dark_edition}#5#'
             }
         },
+        one_chamber = {
+            name = 'One in the Chamber',
+            text = {
+                '{C:white,X:red}X#1#{} on {C:attention}first hand{} of round',
+                'and set {C:blue}Hands{} to {C:attention}0'
+            }
+        },
         old_sailor = {
             name = 'Old Sailor',
             text = {
