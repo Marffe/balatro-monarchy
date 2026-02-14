@@ -19,4 +19,6 @@ print('[Monarchy] - Loading')
 load_files('/utils/')
 load_files('/content/')
 
+Monarchy.set_globals()
+
 print('[Monarchy] - Loaded successfully')

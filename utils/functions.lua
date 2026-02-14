@@ -33,3 +33,29 @@ function Monarchy.rank_from_deck(seed, face_cull)
     end
 	return pseudorandom_element(ranks, seed)
 end
+
+function Monarchy.set_globals()
+    G.STATES.MONARCHY_EVENT = 'monarchy'
+end
+
+function Monarchy.add_tag(tag_key, seed)
+    if not tag_key then
+        seed = seed or 'monarchy_tag_spawn'
+        local tag_pool = get_current_pool('Tag')
+        tag_key = pseudorandom_element(tag_pool, seed)
+        local it = 0
+        while tag_key == 'UNAVAILABLE' do
+            it = it + 1
+            tag_key = pseudorandom_element(tag_pool, seed..it)
+        end
+    end
+    G.E_MANAGER:add_event(Event({
+        trigger = 'after', delay = 0.4,
+        func = (function()
+            add_tag(Tag(tag_key))
+            play_sound('generic1', 0.9 + math.random()*0.1, 0.8)
+            play_sound('holo1', 1.2 + math.random()*0.1, 0.4)
+            return true
+        end)
+    }))
+end
