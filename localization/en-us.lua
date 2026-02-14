@@ -329,6 +329,15 @@ local descriptions = {
                 '{C:inactive,s:0.9}(Last suit: {V:1,s:0.9}#2#{C:inactive,s:0.9})'
             }
         },
+        wingman = {
+            name = 'Wingman Joker',
+            text = {
+                'This Joker gains {C:white,X:red}X#3#{} Mult',
+                'if played hand is a {C:attention}#1# of #2#{},',
+                'resets when {C:attention}Boss Blind{} is defeated',
+                '{C:inactive,s:0.9}(Currently {C:white,X:red,s:0.9}X#4#{C:inactive,s:0.9} Mult)'
+            }
+        },
     }
 }
 

@@ -56,6 +56,7 @@ local joker_list = {
     'walkman',
     'defragment',
     'one_chamber',
+    'wingman',
     'supermassive',
     'lightning_bottle'
 }
