@@ -54,6 +54,7 @@ local joker_list = {
     'gutshot',
 
     'walkman',
+    'defragment',
     'supermassive',
     'lightning_bottle'
 }

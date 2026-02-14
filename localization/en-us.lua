@@ -109,6 +109,14 @@ local descriptions = {
                 'when playing a hand'
             }
         },
+        defragment = {
+            name = 'Defragment',
+            text = {
+                '{C:attention}+#1#{} hand size',
+                'when you discard',
+                '{C:inactive,s:0.9}(Resets at end of round)'
+            }
+        },
         gift_receipt = {
             name = 'Gift Receipt',
             text = {
