@@ -1,0 +1,26 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+# Meteor Shower Replace Planet Cards
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+match_indent = true
+position = 'before'
+pattern = '''
+card:start_materialize({G.C.WHITE, G.C.WHITE}, nil, 1.5*G.SETTINGS.GAMESPEED)
+'''
+payload = '''
+if booster_obj.kind == 'Celestial' then
+    for _, joker in ipairs(SMODS.find_card('j_monarchy_meteor_shower')) do
+        _card = joker.config.center:create_card(joker)
+        if _card then
+            card:remove()
+            card = _card
+            break
+        end
+    end
+end
+'''

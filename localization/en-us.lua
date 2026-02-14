@@ -224,6 +224,14 @@ local descriptions = {
                 'return to your {C:attention}hand'
             }
         },
+        meteor_shower = {
+            name = 'Meteor Shower',
+            text = {
+                '{C:dark_edition}Editioned {C:attention}#1#s{} have a',
+                '{C:green}#3# in #4#{} chance to replace',
+                'cards in {C:planet}#2#s'
+            }
+        },
         metronome = {
             name = 'Metronome',
             text = {
