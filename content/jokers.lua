@@ -53,6 +53,7 @@ local joker_list = {
     'subway_map',
     'gutshot',
 
+    'walkman',
     'supermassive',
     'lightning_bottle'
 }

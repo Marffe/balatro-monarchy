@@ -296,6 +296,14 @@ local descriptions = {
                 'for the next shop'
             }
         },
+        walkman = {
+            name = 'Walkman',
+            text = {
+                'After completing {C:attention}#1#{} Antes,',
+                '{C:red}-#2#{} Ante',
+                '{C:inactive}(Currently #3#/#1#)'
+            }
+        },
         watercolour = {
             name = 'Watercolour Joker',
             text = {
