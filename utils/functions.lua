@@ -59,3 +59,39 @@ function Monarchy.add_tag(tag_key, seed)
         end)
     }))
 end
+
+function Monarchy.add_voucher(voucher_key, seed)
+    if not voucher_key then
+        seed = seed or 'monarchy_voucher_spawn'
+        local voucher_pool = get_current_pool('Voucher')
+        voucher_key = pseudorandom_element(voucher_pool, seed)
+        local it = 0
+        while voucher_key == 'UNAVAILABLE' do
+            it = it + 1
+            voucher_key = pseudorandom_element(voucher_pool, seed..it)
+        end
+    end
+    G.E_MANAGER:add_event(Event({
+        trigger = 'after', delay = 0.5,
+        func = function()
+            local voucher_card = SMODS.create_card({area = G.play, key = voucher_key})
+            voucher_card:add_to_deck()
+            voucher_card:start_materialize()
+            voucher_card.cost = 0
+            G.play:emplace(voucher_card)
+
+            voucher_card:redeem()
+            
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    voucher_card:start_dissolve()                
+                    return true
+                end
+            }))
+
+            delay(1)
+
+            return true
+        end
+    }))
+end
