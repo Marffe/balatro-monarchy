@@ -362,6 +362,23 @@ local descriptions = {
                 '{C:inactive,s:0.9}(Currently {C:white,X:red,s:0.9}X#4#{C:inactive,s:0.9} Mult)'
             }
         },
+    },
+    Voucher = {
+        frequent_flier = {
+            name = 'Frequent Flier',
+            text = {
+                'Gain {C:money}#1#{} when',
+                'skipping a {C:attention}Blind'
+            }
+        },
+        first_class = {
+            name = 'First Class',
+            text = {
+                'Gain a random {C:attention}Tag',
+                'when you spend {C:money}#1#',
+                'within one shop'
+            }
+        },
     }
 }
 
