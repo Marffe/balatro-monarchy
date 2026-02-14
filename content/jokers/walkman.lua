@@ -23,7 +23,7 @@ Monarchy.Joker({
             card.ability.extra.current = -1
             return {
                 modify = -1 * card.ability.extra.back,
-                message = '-1 Ante'
+                message = localize('monarchy_walkman_ante_loss')
             }
         end
     end,

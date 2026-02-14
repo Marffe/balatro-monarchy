@@ -26,7 +26,8 @@ local loc_table = {
             monarchy_lineup_trigger = 'flavour text pls',
             monarchy_watercolour_default = 'None played',
             monarchy_watercolour_wild = 'Wild Suit',
-            monarchy_sushi_rolls_set = 'flavour text pls'
+            monarchy_sushi_rolls_set = 'flavour text pls',
+            monarchy_walkman_ante_loss = '-1 Ante',
         }
     },
     descriptions = {}
