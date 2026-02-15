@@ -21,6 +21,7 @@ Monarchy.Voucher = SMODS.Voucher:extend({
 
 Monarchy.Voucher({
     key = 'frequent_flier',
+    pos = {x = 0, y= 0},
     config = {extra = {dollars = 8}},
     loc_vars = function(self, info_queue, card)
         return {vars = {localize('$')..card.ability.extra.dollars}}
@@ -40,6 +41,7 @@ end
 
 Monarchy.Voucher({
     key = 'first_class',
+    pos = {x = 1, y= 0},
     requires = {'v_monarchy_frequent_flier'},
     config = {extra = {current = 0, target = 30}},
     loc_vars = function(self, info_queue, card)
