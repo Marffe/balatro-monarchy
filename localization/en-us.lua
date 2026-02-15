@@ -371,6 +371,13 @@ local descriptions = {
                 '{C:inactive,s:0.9}(Last suit: {V:1,s:0.9}#2#{C:inactive,s:0.9})'
             }
         },
+        wild_goose = {
+            name = 'Wild Goose Chase',
+            text = {
+                'A {C:attention}random card{} in each',
+                '{C:attention}drawn hand{} scores twice'
+            }
+        },
         wingman = {
             name = 'Wingman Joker',
             text = {
