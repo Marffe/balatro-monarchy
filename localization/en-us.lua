@@ -175,6 +175,13 @@ local descriptions = {
                 'effect when they score'
             }
         },
+        jolie = {
+            name = 'Jolie-Laide',
+            text = {
+                '{C:attention}Unenhanced #1#s{} score',
+                'twice when {C:attention}played'
+            }
+        },
         kettlebell = {
             name = 'Kettlebell',
             text = {

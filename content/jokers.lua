@@ -58,7 +58,7 @@ local joker_list = {
     'meteor_shower',
     'slinky',
     'suspicious_tile',
-
+    'jolie',
     'walkman',
     'defragment',
     'one_chamber',
