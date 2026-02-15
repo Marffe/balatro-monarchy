@@ -17,13 +17,6 @@ Monarchy.Joker({
             juice_card_until(card, function() return G.GAME.current_round.hands_played == 0 end, true)
         end
         if context.joker_main and G.GAME.current_round.hands_played == 0 then
-            ease_hands_played(-G.GAME.current_round.hands_left)
-            G.E_MANAGER:add_event(Event({
-                func = function()
-                    play_sound('monarchy_gunshot')
-                    return true
-                end
-            }))
             return {
                 xmult = card.ability.extra.xmult,
             }

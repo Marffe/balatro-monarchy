@@ -24,3 +24,26 @@ if booster_obj.kind == 'Celestial' then
     end
 end
 '''
+
+# One in the Chamber: remove all hands when played
+[[patches]]
+[patches.pattern]
+target = 'functions/state_events.lua'
+match_indent = true
+position = 'at'
+pattern = '''
+ease_hands_played(-1)
+'''
+payload = '''
+if next(SMODS.find_card('j_monarchy_one_chamber')) then
+    ease_hands_played(-G.GAME.current_round.hands_left)
+    G.E_MANAGER:add_event(Event({
+        func = function()
+            play_sound('monarchy_gunshot')
+            return true
+        end
+    }))
+else
+    ease_hands_played(-1)
+end
+'''

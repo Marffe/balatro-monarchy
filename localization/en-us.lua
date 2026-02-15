@@ -260,8 +260,8 @@ local descriptions = {
         one_chamber = {
             name = 'One in the Chamber',
             text = {
-                '{C:white,X:red}X#1#{} on {C:attention}first hand{} of round',
-                'and set {C:blue}Hands{} to {C:attention}0'
+                '{C:white,X:red}X#1#{} Mult',
+                'set {C:blue}Hands{} to {C:attention}0'
             }
         },
         old_sailor = {
