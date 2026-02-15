@@ -36,7 +36,7 @@ Monarchy.Joker({
             if SMODS.pseudorandom_probability(card, 'monarchy_slinky_break', 1, card.ability.extra.odds) then
                 return {
                     remove = true,
-                    message = 'Snapped!',
+                    message = localize('monarchy_slinky'),
                     message_card = context.destroy_card,
                     juice_card = card
                 }

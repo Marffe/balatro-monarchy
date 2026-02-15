@@ -29,6 +29,8 @@ local loc_table = {
             monarchy_sushi_rolls_set = 'flavour text pls',
             monarchy_walkman_ante_loss = '-1 Ante',
             monarchy_clasped_cloak = 'placeholder message',
+            monarchy_wild_goose = 'Goosed!',
+            monarchy_slinky = 'Snapped!'
         }
     },
     descriptions = {}
