@@ -28,6 +28,7 @@ local loc_table = {
             monarchy_watercolour_wild = 'Wild Suit',
             monarchy_sushi_rolls_set = 'flavour text pls',
             monarchy_walkman_ante_loss = '-1 Ante',
+            monarchy_clasped_cloak = 'placeholder message',
         }
     },
     descriptions = {}
@@ -99,6 +100,14 @@ local descriptions = {
                 '{C:blue}+#1#{} Chips, {C:red}+#2#{} Mult',
                 'or earn {C:money}#3#{} on',
                 '{C:attention}first hand{} of round'
+            }
+        },
+        clasped_cloak = {
+            name = 'Clasped Cloak',
+            text = {
+                'Each {C:attention}card{} held in hand',
+                'gains {C:white,X:red}X#1#{} Mult',
+                '{C:inactive,s:0.95}(Resets when played)'
             }
         },
         daifugo = {

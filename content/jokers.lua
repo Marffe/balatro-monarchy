@@ -59,6 +59,7 @@ local joker_list = {
     'slinky',
     'suspicious_tile',
     'jolie',
+    'clasped_cloak',
     'walkman',
     'defragment',
     'one_chamber',
