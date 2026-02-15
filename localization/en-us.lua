@@ -289,6 +289,16 @@ local descriptions = {
                 'chance to destroy'
             }
         },
+        slinky = {
+            name = 'Slinky Joker',
+            text = {
+                'Each played {C:attention}#1#{}, {C:attention}#2#{},',
+                '{C:attention}#3#{}, {C:attention}#4#{}, {C:attention}#5#{} or {C:attention}#6#{} gives',
+                '{C:white,X:red}X#7#{} Mult when scored and',
+                'has a {C:green}#8# in #9#{} chance',
+                'to be destroyed'
+            }
+        },
         socket_set = {
             name = 'Socket Set',
             text = {

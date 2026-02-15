@@ -56,7 +56,7 @@ local joker_list = {
     'gutshot',
     'gold_cables',
     'meteor_shower',
-
+    'slinky',
     'suspicious_tile',
 
     'walkman',
