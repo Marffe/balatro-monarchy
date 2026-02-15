@@ -14,6 +14,13 @@ function Monarchy.prefix_loc_table(input, output)
     return output
 end
 
+function Monarchy.hand_contains_enhancement(hand, enhancement)
+    if not next(hand) then return false end
+    for _, card in ipairs(hand) do
+        if SMODS.has_enhancement(card, enhancement) then return true end
+    end
+end
+
 function Monarchy.hand_contains_rank(hand, rank)
     for _, card in ipairs(hand) do
         if card.base.value == rank then return true end

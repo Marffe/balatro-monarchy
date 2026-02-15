@@ -327,6 +327,14 @@ local descriptions = {
                 'for the next shop'
             }
         },
+        suspicious_tile = {
+            name = 'Suspicious Tile',
+            text = {
+                '{C:attention}#1#s{} can be used to',
+                'complete {C:attention}Three{}, {C:attention}Four',
+                'and {C:attention}Five of a Kind'
+            }
+        },
         vespertine = {
             name = 'Vespertine',
             text = {

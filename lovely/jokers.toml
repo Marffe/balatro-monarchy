@@ -47,3 +47,17 @@ else
     ease_hands_played(-1)
 end
 '''
+
+# Suspicious Tile: allow wild cards to count for X_same
+[[patches]]
+[patches.pattern]
+target = '=[SMODS _ "src/overrides.lua"]'
+match_indent = true
+position = 'before'
+pattern = '''
+for _, v in ipairs(G.handlist) do
+    if not results.top and results[v] then
+'''
+payload = '''
+results = Monarchy.joker_functions.suspicious_tile(hand, results)
+'''

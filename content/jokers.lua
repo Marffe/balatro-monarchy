@@ -3,7 +3,7 @@ Monarchy.Joker = SMODS.Joker:extend({
     pos = {x = 0, y = 0},
     process_loc_text = function(self)
         SMODS.process_loc_text(G.localization.descriptions.Joker, self.key,
-            G.localization.descriptions.Joker[self.key] or self.loc_txt or {
+        G.localization.descriptions.Joker[self.key] or self.loc_txt or {
                 name = {'{C:inactive}#1#','{C:red,s:0.6}Placeholder Joker'}, text = {'{C:inactive}This Joker has not got','{C:inactive}a localization entry'}
             })
         self.discovered = true
@@ -19,6 +19,8 @@ SMODS.Atlas({
     path = 'monarchy-jokers.png',
     px = 71, py = 95
 })
+
+Monarchy.joker_functions = {}
 
 local joker_list = {
     'bicycle',
@@ -55,6 +57,8 @@ local joker_list = {
     'gold_cables',
     'meteor_shower',
 
+    'suspicious_tile',
+
     'walkman',
     'defragment',
     'one_chamber',
@@ -66,6 +70,7 @@ local joker_list = {
 for _, filename in ipairs(joker_list) do
     assert(SMODS.load_file('content/jokers/'..filename..'.lua'), string.format('monarchy - Error found in %s.lua', filename))()
 end
+
 
 Monarchy.reset_game_globals = function(initial)
     if initial then
