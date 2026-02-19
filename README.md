@@ -6,7 +6,7 @@ A Vanilla+ Balatro mod that expands on the base game, and opens new avenues to p
 
 Join the [Discord Server](https:/discord.gg/j2AvdG4vaX) for updates on the mod progress, as well as a place to give constructive feedback!
 
-Take a Look at the [Wiki Page] if you're confused, for more info on all of the content!
+Take a Look at the [Wiki Page](https://balatromods.miraheze.org/wiki/Monarchy) if you're confused, for more info on all of the content!
 
 See [Releases] for the official working releases.
 
