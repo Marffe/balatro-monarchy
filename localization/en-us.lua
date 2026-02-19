@@ -30,7 +30,8 @@ local loc_table = {
             monarchy_walkman_ante_loss = '-1 Ante',
             monarchy_clasped_cloak = 'placeholder message',
             monarchy_wild_goose = 'Goosed!',
-            monarchy_slinky = 'Snapped!'
+            monarchy_slinky = 'Snapped!',
+            monarchy_viral_spread = 'Infected!',
         }
     },
     descriptions = {}
@@ -420,6 +421,22 @@ local descriptions = {
                 'Gain a random {C:attention}Tag',
                 'when you spend {C:money}#1#',
                 'within one shop'
+            }
+        },
+        viral = {
+            name = 'Viral',
+            text = {
+                '{C:attention}Enhancements{} have a {C:green}#1# in #2#',
+                'chance to spread to adjacent',
+                '{C:attention}scoring cards{} when scored'
+            }
+        },
+        biohazard = {
+            name = 'Biohazard',
+            text = {
+                '{C:dark_edition}Editions{} and {C:attention}seals{} have',
+                'a {C:green}#1# in #2#{} chance to spread to',
+                'adjacent {C:attention}scoring cards{} when scored'
             }
         },
     }
