@@ -1,0 +1,19 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+# Abberant Deck
+[[patches]]
+[patches.pattern]
+target = '=[SMODS _ "src/utils.lua"]'
+match_indent = true
+position = 'before'
+pattern = '''
+if reps[j] == 1 and flags.calculated then
+'''
+payload = '''
+context.monarchy_abberant = true
+SMODS.calculate_card_areas('individual', context, {}, { main_scoring = true })
+context.monarchy_abberant = nil
+'''

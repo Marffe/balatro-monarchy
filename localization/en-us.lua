@@ -32,6 +32,7 @@ local loc_table = {
             monarchy_wild_goose = 'Goosed!',
             monarchy_slinky = 'Snapped!',
             monarchy_viral_spread = 'Infected!',
+            monarchy_abberant_trigger = 'Abberant!',
         }
     },
     descriptions = {}
@@ -437,6 +438,49 @@ local descriptions = {
                 '{C:dark_edition}Editions{} and {C:attention}seals{} have',
                 'a {C:green}#1# in #2#{} chance to spread to',
                 'adjacent {C:attention}scoring cards{} when scored'
+            }
+        },
+    },
+    Back = {
+        orbit = {
+            name = 'Orbit Deck',
+            text = {
+                'Gain {C:attention}#1# {C:attention,T:tag_orbital}#2#s{} after',
+                'defeating a {C:attention}Boss Blind',
+                '{s:0.2} ',
+                '{C:planet}#3#{}, {C:planet}#4#s',
+                'and other related objects',
+                'no longer appear'
+            }
+        },
+        jetsetter = {
+            name = 'Jetsetter Deck',
+            text = {
+                'Start run with the {T:v_monarchy_frequent_flier,C:attention}#1#',
+                'and {T:v_monarchy_first_class,C:attention}#2#{} vouchers',
+                '{s:0.2} ',
+                'Raise the cap on interest',
+                'earned to {C:money}#3#'
+            }
+        },
+        sparkle = {
+            name = 'Sparkle Deck',
+            text = {
+                'Start run with the {T:v_magic_trick,C:attention}#1#',
+                'and {T:v_illusion,C:attention}#2#{} vouchers',
+                '{s:0.2} ',
+                'Destroy {C:attention}#3# cards{} at',
+                'the end of each round'
+            }
+        },
+        abberant = {
+            name = 'Abberant Deck',
+            text = {
+                'Start with {C:attention}#1# Enhanced Cards',
+                '{s:0.2} ',
+                '{C:attention}Enhanced cards{} have their',
+                '{C:attention}enhancement{} randomised',
+                'when they score'
             }
         },
     }
