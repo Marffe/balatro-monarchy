@@ -13,21 +13,19 @@ Monarchy.Joker({
         return {vars = {localize({set = 'Enhanced', key = 'm_steel', type = 'name_text'}), card.ability.extra.gain}}
     end,
     calculate = function(self, card, context)
-        if context.before then
-            for _, pcard in ipairs(context.scoring_hand) do
-                if SMODS.has_enhancement(pcard, 'm_steel') then
-                    juice_card(card)
-                    SMODS.scale_card(pcard, {
-                        ref_table = pcard.ability,
-                        ref_value = 'h_x_mult',
-                        scalar_table = card.ability.extra,
-                        scalar_value = 'gain',
-                        message_key = 'a_xmult',
-                        message_colour = G.C.RED
-                    })
-                end
+        if context.individual and context.cardarea == G.play then
+            if SMODS.has_enhancement(context.other_card, 'm_steel') then
+                juice_card(card)
+                SMODS.scale_card(context.other_card, {
+                    ref_table = context.other_card.ability,
+                    ref_value = 'h_x_mult',
+                    scalar_table = card.ability.extra,
+                    scalar_value = 'gain',
+                    -- message_key = 'a_xmult',
+                    message_colour = G.C.RED
+                })
             end
-            return nil, true
         end
+        return nil, true
     end,
 })
