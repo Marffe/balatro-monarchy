@@ -395,7 +395,8 @@ local descriptions = {
             name = 'Wild Goose Chase',
             text = {
                 'A {C:attention}random card{} in each',
-                '{C:attention}drawn hand{} scores twice'
+                '{C:attention}drawn hand{} gives',
+                '{C:white,X:red}X#1#{} Mult when {C:attention}scored'
             }
         },
         wingman = {

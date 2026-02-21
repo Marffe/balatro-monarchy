@@ -8,7 +8,7 @@ Monarchy.Joker({
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
-    config = {extra = {}},
+    config = {extra = {xmult = 2}},
     remove_goose_target = function(self, card)
         for _, _card in ipairs(G.playing_cards) do
             if _card.ability.goosed then
@@ -18,6 +18,9 @@ Monarchy.Joker({
             end
         end
     end,
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.xmult}}
+    end,
     calculate = function(self, card, context)
         if context.hand_drawn then
             if card.ability.extra.goosed then
@@ -25,6 +28,11 @@ Monarchy.Joker({
             end
             local goose_target = pseudorandom_element(G.hand.cards, 'monarchy_wild_goose')
             goose_target.ability.goosed = true
+        end
+        if context.individual and context.cardarea == G.play and context.other_card.ability.goosed then
+            return {
+                xmult = card.ability.extra.xmult
+            }
         end
         if context.after and card.ability.extra.goosed then
             self:remove_goose_target(card)
