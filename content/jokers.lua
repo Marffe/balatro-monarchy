@@ -75,6 +75,7 @@ end
 
 Monarchy.reset_game_globals = function(initial)
     if initial then
+        Monarchy.sparkle_deck_effect = nil
         G.GAME.Monarchy = {
             joker_values = {
                 vespertine_hand_count = 0
