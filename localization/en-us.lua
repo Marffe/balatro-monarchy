@@ -191,8 +191,8 @@ local descriptions = {
         jolie = {
             name = 'Jolie-Laide',
             text = {
-                '{C:attention}Unenhanced #1#s{} score',
-                'twice when {C:attention}played'
+                '{C:attention}Unenhanced #1#s{} give',
+                '{C:white,X:red}X#2#{} Mult when {C:attention}scored'
             }
         },
         kettlebell = {

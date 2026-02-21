@@ -8,17 +8,15 @@ Monarchy.Joker({
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
-    config = {extra = {rank = 'Queen'}},
+    config = {extra = {rank = 'Queen', xmult = 2}},
     loc_vars = function(self, info_queue, card)
-        return {vars = {localize(card.ability.extra.rank, 'ranks')}}
+        return {vars = {localize(card.ability.extra.rank, 'ranks'), card.ability.extra.xmult}}
     end,
     calculate = function(self, card, context)
-        if context.before then
-            for _, _pcard in ipairs(context.scoring_hand) do
-                if _pcard.base.value == card.ability.extra.rank and not next(SMODS.get_enhancements(_pcard)) then
-                    _pcard.ability.jolie = true
-                end
-            end
+        if context.individual and context.cardarea == G.play and  context.other_card.base.value == card.ability.extra.rank and not next(SMODS.get_enhancements(context.other_card)) then
+            return {
+                xmult = card.ability.extra.xmult
+            }
         end
     end,
 })
