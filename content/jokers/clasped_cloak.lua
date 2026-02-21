@@ -8,7 +8,7 @@ Monarchy.Joker({
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
-    config = {extra = {xmult = 0.2}},
+    config = {extra = {xmult = 0.3}},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.xmult}}
     end,
@@ -41,6 +41,7 @@ Monarchy.Joker({
                         operation = '-',
                         no_message = true
                     })
+                    pcard.ability.monarchy_clasped_cloak = 0
                 end
             end
             return {
