@@ -61,7 +61,7 @@ Monarchy.Voucher({
             card.ability.extra.current = 0
             card.ability.extra.active = true
         end
-        if (context.reroll_shop or context.buying_card) and card.ability.extra.active then
+        if (context.reroll_shop or context.buying_card or context.open_booster) and card.ability.extra.active then
             card.ability.extra.current = card.ability.extra.current + (context.cost or 0)+ (context.card and context.card.cost or 0)
             if card.ability.extra.current >= card.ability.extra.target then
                 card.ability.extra.active = false
