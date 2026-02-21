@@ -31,19 +31,6 @@ Monarchy.Joker({
                     no_message = true
                 })
             end
-            for _, pcard in ipairs(context.full_hand) do
-                if pcard.ability.monarchy_clasped_cloak then
-                    SMODS.scale_card(pcard, {
-                        ref_table = pcard.ability,
-                        ref_value = 'perma_x_mult',
-                        scalar_table = pcard.ability,
-                        scalar_value = 'monarchy_clasped_cloak',
-                        operation = '-',
-                        no_message = true
-                    })
-                    pcard.ability.monarchy_clasped_cloak = 0
-                end
-            end
             return {
                 message = localize('monarchy_clasped_cloak'),
                 colour = G.C.MULT
