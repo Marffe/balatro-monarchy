@@ -409,6 +409,14 @@ local descriptions = {
                 '{C:white,X:red}X#1#{} Mult when {C:attention}scored'
             }
         },
+        windchime = {
+            name = 'Prismatic Windchime',
+            text = {
+                'After playing {C:attention}#1# Enhanced cards',
+                'this Joker gains {C:white,X:red}X#2#{} Mult',
+                '{C:inactive,s:0.9}(Currently {C:white,X:red,s:0.9}X#3#{C:inactive,s:0.9} Mult)'
+            }
+        },
         wingman = {
             name = 'Wingman Joker',
             text = {

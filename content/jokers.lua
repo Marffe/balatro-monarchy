@@ -54,6 +54,7 @@ local joker_list = {
     'shattered',
     'anchor',
     'subway_map',
+    'windchime',
     'gutshot',
     'gold_cables',
     'meteor_shower',
