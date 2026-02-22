@@ -49,7 +49,7 @@ Monarchy.Back({
                 G.E_MANAGER:add_event(Event({
                     trigger = 'after', delay = 0.4,
                     func = (function()
-                        Monarchy.add_tag(card.effect.config.extra.tag)
+                        Monarchy.Functions.add_tag(card.effect.config.extra.tag)
                         return true
                     end)
                 }))
@@ -67,7 +67,7 @@ Monarchy.Back({
     end,
     apply = function(self, card)
         for _, voucher in ipairs(card.effect.config.extra.vouchers) do
-            Monarchy.add_voucher(voucher)
+            Monarchy.Functions.add_voucher(voucher)
         end
         G.GAME.interest_cap = G.GAME.interest_cap + (card.effect.config.extra.interest * 5)
     end,
@@ -83,20 +83,20 @@ Monarchy.Back({
     end,
     apply = function(self, card)
         for _, voucher in ipairs(card.effect.config.extra.vouchers) do
-            Monarchy.add_voucher(voucher)
+            Monarchy.Functions.add_voucher(voucher)
         end
     end,
     calculate = function(self, card, context)
         if context.end_of_round and context.main_eval then
-            Monarchy.sparkle_deck_effect = true
+            Monarchy.Values.sparkle_deck_effect = true
         end
     end
 })
 
 local update_shopref = Game.update_shop
 function Game.update_shop(self, dt)
-    if not Monarchy.sparkle_deck_effect then update_shopref(self, dt) return end
-    Monarchy.sparkle_deck_effect = nil
+    if not Monarchy.Values.sparkle_deck_effect then update_shopref(self, dt) return end
+    Monarchy.Values.sparkle_deck_effect = nil
     G.STATE_COMPLETE = true
     for i=1, G.GAME.selected_back.effect.config.extra.destroy do
         draw_card(G.deck, G.play)

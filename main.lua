@@ -1,8 +1,12 @@
-Monarchy = SMODS.current_mod
+Monarchy = {
+    mod = SMODS.current_mod,
+    Functions = {},
+    Values = {},
+}
 
 local function load_files(path)
     print('[Monarchy] - Loading '..path:sub(2, -2))
-    local info = NFS.getDirectoryItemsInfo(Monarchy.path .. path)
+    local info = NFS.getDirectoryItemsInfo(Monarchy.mod.path .. path)
     table.sort(info, function(a, b)
         return a.name < b.name
     end)
@@ -19,6 +23,6 @@ print('[Monarchy] - Loading')
 load_files('/utils/')
 load_files('/content/')
 
-Monarchy.set_globals()
+Monarchy.Functions.set_globals()
 
 print('[Monarchy] - Loaded successfully')

@@ -44,11 +44,3 @@ SMODS.Sound({
     key = 'goose',
     path = 'goose.ogg'
 })
-
-Monarchy_Hook_card_click = Card.click
-function Card:click()
-    if self.ability.goosed and not self.highlighted then
-        play_sound('monarchy_goose')
-    end
-    Monarchy_Hook_card_click(self)
-end

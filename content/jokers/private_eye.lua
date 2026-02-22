@@ -10,7 +10,7 @@ Monarchy.Joker({
     perishable_compat = true,
     calculate = function(self, card, context)
         if context.end_of_round and context.main_eval and context.beat_boss then
-            Monarchy.add_tag(nil, 'monarchy_private_eye')
+            Monarchy.Functions.add_tag(nil, 'monarchy_private_eye')
             return {
                 message = localize('monarchy_tag_added')
             }

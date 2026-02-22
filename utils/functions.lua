@@ -1,6 +1,6 @@
 -- Function to automatically apply mod prefix and item prefix to items in loc table
-function Monarchy.prefix_loc_table(input, output)
-    local mod_prefix = Monarchy.prefix
+function Monarchy.Functions.prefix_loc_table(input, output)
+    local mod_prefix = Monarchy.mod.prefix
     for type, data in pairs(input) do
         local pref = mod_prefix .. '_'
         if SMODS[type].class_prefix then
@@ -14,20 +14,20 @@ function Monarchy.prefix_loc_table(input, output)
     return output
 end
 
-function Monarchy.hand_contains_enhancement(hand, enhancement)
+function Monarchy.Functions.hand_contains_enhancement(hand, enhancement)
     if not next(hand) then return false end
     for _, card in ipairs(hand) do
         if SMODS.has_enhancement(card, enhancement) then return true end
     end
 end
 
-function Monarchy.hand_contains_rank(hand, rank)
+function Monarchy.Functions.hand_contains_rank(hand, rank)
     for _, card in ipairs(hand) do
         if card.base.value == rank then return true end
     end
 end
 
-function Monarchy.rank_from_deck(seed, face_cull)
+function Monarchy.Functions.rank_from_deck(seed, face_cull)
 	local ranks = {}
 	local seed = seed or 'monarchy_random_rank_from_deck'
 	for _, card in pairs(G.playing_cards) do
@@ -41,11 +41,11 @@ function Monarchy.rank_from_deck(seed, face_cull)
 	return pseudorandom_element(ranks, seed)
 end
 
-function Monarchy.set_globals()
+function Monarchy.Functions.set_globals()
     G.STATES.MONARCHY_EVENT = 'monarchy'
 end
 
-function Monarchy.add_tag(tag_key, seed)
+function Monarchy.Functions.add_tag(tag_key, seed)
     if not tag_key then
         seed = seed or 'monarchy_tag_spawn'
         local tag_pool = get_current_pool('Tag')
@@ -67,7 +67,7 @@ function Monarchy.add_tag(tag_key, seed)
     }))
 end
 
-function Monarchy.add_voucher(voucher_key, seed)
+function Monarchy.Functions.add_voucher(voucher_key, seed)
     if not voucher_key then
         seed = seed or 'monarchy_voucher_spawn'
         local voucher_pool = get_current_pool('Voucher')

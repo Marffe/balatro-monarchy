@@ -13,11 +13,11 @@ Monarchy.Joker({
         return {vars = {card.ability.extra.mult, card.ability.extra.rank and localize(card.ability.extra.rank, 'ranks') or localize('monarchy_socket_set_default')}}
     end,
     add_to_deck = function(self, card, from_debuff)
-        card.ability.extra.rank = card.ability.extra.rank or Monarchy.rank_from_deck(nil, true)
+        card.ability.extra.rank = card.ability.extra.rank or Monarchy.Functions.rank_from_deck(nil, true)
     end,
     calculate = function(self, card, context)
         if context.end_of_round and context.main_eval then
-            card.ability.extra.rank = Monarchy.rank_from_deck(nil, true)
+            card.ability.extra.rank = Monarchy.Functions.rank_from_deck(nil, true)
             return {
                 message = localize(card.ability.extra.rank, 'ranks')
             }

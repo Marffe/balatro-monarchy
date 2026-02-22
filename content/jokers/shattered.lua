@@ -20,6 +20,21 @@ Monarchy.Joker({
         card.children.floating_sprite_2.role.draw_major = card
         card.children.floating_sprite_2.states.hover.can = false
         card.children.floating_sprite_2.states.click.can = false
+         card.canvas_text = {SMODS.CanvasSprite({
+            text_colour = SMODS.Gradients.warning_bg,
+            text = 'hello',
+            text_offset = {x = 53, y = 77},
+            text_width = 26,
+            text_height = 20,
+            text_font = 'stocking_DETERMINATION'
+        }), SMODS.CanvasSprite({
+            text_colour = SMODS.Gradients.warning_bg,
+            text = 'bye',
+            text_offset = {x = 53, y = 37},
+            text_width = 26,
+            text_height = 20,
+            text_font = 'stocking_DETERMINATION'
+        })}
     end,
     add_to_deck = function(self, card, from_debuff)
         for _, _card in ipairs(G.playing_cards) do

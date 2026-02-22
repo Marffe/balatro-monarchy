@@ -14,7 +14,7 @@ Monarchy.Joker({
     end,
     calculate = function(self, card, context)
         if context.joker_main and next(context.poker_hands[card.ability.extra.hand]) then
-            if Monarchy.hand_contains_rank(context.scoring_hand, card.ability.extra.ranks[1]) and Monarchy.hand_contains_rank(context.scoring_hand, card.ability.extra.ranks[2]) then
+            if Monarchy.Functions.hand_contains_rank(context.scoring_hand, card.ability.extra.ranks[1]) and Monarchy.Functions.hand_contains_rank(context.scoring_hand, card.ability.extra.ranks[2]) then
                 return {
                     mult = card.ability.extra.mult
                 }

@@ -13,7 +13,7 @@ Monarchy.Joker({
         return {vars = {localize(card.ability.extra.hand, 'poker_hands'), localize('k_aces'), card.ability.extra.gain, card.ability.extra.xmult}}
     end,
     calculate = function(self, card, context)
-        if context.before and context.scoring_name == card.ability.extra.hand and Monarchy.hand_contains_rank(context.poker_hands[card.ability.extra.hand][1], card.ability.extra.rank) then
+        if context.before and context.scoring_name == card.ability.extra.hand and Monarchy.Functions.hand_contains_rank(context.poker_hands[card.ability.extra.hand][1], card.ability.extra.rank) then
             SMODS.scale_card(card, {
                 ref_table = card.ability.extra,
                 ref_value = 'xmult',

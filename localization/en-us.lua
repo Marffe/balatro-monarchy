@@ -487,4 +487,4 @@ local descriptions = {
     }
 }
 
-return Monarchy.prefix_loc_table(descriptions, loc_table)
+return Monarchy.Functions.prefix_loc_table(descriptions, loc_table)

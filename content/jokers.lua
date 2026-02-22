@@ -73,9 +73,9 @@ for _, filename in ipairs(joker_list) do
 end
 
 
-Monarchy.reset_game_globals = function(initial)
+Monarchy.mod.reset_game_globals = function(initial)
     if initial then
-        Monarchy.sparkle_deck_effect = nil
+        Monarchy.Values.sparkle_deck_effect = nil
         G.GAME.Monarchy = {
             joker_values = {
                 vespertine_hand_count = 0
@@ -84,7 +84,7 @@ Monarchy.reset_game_globals = function(initial)
     end
 end
 
-Monarchy.calculate = function(self, context)
+Monarchy.mod.calculate = function(self, context)
     if context.after then
         -- Vespertine Tracker
         G.GAME.Monarchy.joker_values.vespertine_hand_count = #context.scoring_hand

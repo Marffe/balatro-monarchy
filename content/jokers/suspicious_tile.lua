@@ -40,7 +40,7 @@ function Monarchy.joker_functions.suspicious_tile(hand, results)
         return ret
     end
 
-    if next(SMODS.find_card('j_monarchy_suspicious_tile')) and Monarchy.hand_contains_enhancement(hand, 'm_wild') then
+    if next(SMODS.find_card('j_monarchy_suspicious_tile')) and Monarchy.Functions.hand_contains_enhancement(hand, 'm_wild') then
         local parts = {
             _5 = get_X(5, hand),
             _4 = get_X(4, hand),

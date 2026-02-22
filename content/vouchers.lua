@@ -65,7 +65,7 @@ Monarchy.Voucher({
             card.ability.extra.current = card.ability.extra.current + (context.cost or 0)+ (context.card and context.card.cost or 0)
             if card.ability.extra.current >= card.ability.extra.target then
                 card.ability.extra.active = false
-                Monarchy.add_tag(nil, 'monarchy_first_class')
+                Monarchy.Functions.add_tag(nil, 'monarchy_first_class')
                 return {
                     message = 'First Class!',
                     colour = G.C.BLUE
