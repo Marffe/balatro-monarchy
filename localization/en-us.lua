@@ -33,6 +33,8 @@ local loc_table = {
             monarchy_slinky = 'Snapped!',
             monarchy_viral_spread = 'Infected!',
             monarchy_abberant_trigger = 'Abberant!',
+            monarchy_anchor_active = 'Aweigh!',
+            monarchy_anchor_primed = 'Let go!',
         }
     },
     descriptions = {}
@@ -47,6 +49,14 @@ local descriptions = {
                 'every {C:attention}card{} in deck',
                 'gains {C:blue}+#1#{} Chips permanently',
                 '{C:inactive,s:0.8}Smells like {C:dark_edition,s:0.8}#2#{C:inactive,s:0.8}...'
+            }
+        },
+        anchor = {
+            name = 'Anchor',
+            text = {
+                'Cards in the {C:attention}bottom half',
+                'of your deck give',
+                '{C:mult}+#1#{} Mult when scored'
             }
         },
         arcade_stub = {

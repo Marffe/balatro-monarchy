@@ -52,6 +52,7 @@ local joker_list = {
     'sushi_rolls',
     'negative_film',
     'shattered',
+    'anchor',
     'subway_map',
     'gutshot',
     'gold_cables',
@@ -101,6 +102,18 @@ Monarchy.mod.calculate = function(self, context)
                     no_message = true
                 })
                 pcard.ability.monarchy_clasped_cloak = 0
+            end
+        end
+    end
+
+    if context.end_of_round then
+        -- End of round resets
+        local reset_state = {
+            monarchy_anchor = false
+        }
+        for _, card in ipairs(G.playing_cards) do
+            for k, v in pairs(reset_state) do
+                card.ability[k] = v and v or nil
             end
         end
     end
