@@ -460,6 +460,29 @@ local descriptions = {
             }
         },
     },
+    Tag = {
+        sparkle = {
+            name = 'Sparkle Tag',
+            text = {
+                'Add a {C:attention}random enhancement',
+                'to {C:attention}#1#{} cards in your deck'
+            }
+        },
+        meal_deal = {
+            name = 'Meal Deal Tag',
+            text = {
+                'Create up to {C:attention}#1#',
+                'random {C:attention}Food Jokers'
+            }
+        },
+        lightning = {
+            name = 'Lightning Tag',
+            text = {
+                'Your next {C:attention}first played hand',
+                'retriggers {C:attention}#1#{} times'
+            }
+        },
+    },
     Back = {
         orbit = {
             name = 'Orbit Deck',
