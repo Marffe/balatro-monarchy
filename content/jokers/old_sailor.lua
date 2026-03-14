@@ -8,7 +8,7 @@ Monarchy.Joker({
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
-    config = {extra = {dollars = 4, mult = 60, dol_odds = 5, mult_odds = 20}},
+    config = {extra = {dollars = 2, mult = 30, dol_odds = 5, mult_odds = 20}},
     loc_vars = function(self, info_queue, card)
         local d_num, d_denom = SMODS.get_probability_vars(card, 1, card.ability.extra.dol_odds, 'monarchy_old_sailor_dollars')
         local m_num, m_denom = SMODS.get_probability_vars(card, 1, card.ability.extra.mult_odds, 'monarchy_old_sailor_mult')
