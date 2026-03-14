@@ -32,9 +32,18 @@ Monarchy.Joker({
                 message_card = target,
                 juice_card = card,
                 func = function()
+                    local vals_after_level
+                        vals_after_level = copy_table(G.GAME.current_round.current_hand)
+                        local text,disp_text,_,_,_ = G.FUNCS.get_poker_hand_info(G.play.cards)
+                        vals_after_level.handname = disp_text or ''
+                        vals_after_level.level = (G.GAME.hands[text] or {}).level or ''
+                        for name, p in pairs(SMODS.Scoring_Parameters) do
+                            vals_after_level[name] = p.current
+                        end
                     SMODS.calculate_effect({message = 'Discarded!', colour = G.C.RED, message_card = target, juice_card = card}, target)
                     G.hand.highlighted = {target}
                     G.FUNCS.discard_cards_from_highlighted(nil, true)
+                    update_hand_text({immediate = true, nopulse = true, delay = 0}, vals_after_level)
                     -- draw_card(G.hand, G.discard, nil, 'down', false, target, 0.6)
                     G.E_MANAGER:add_event(Event({
                         trigger = 'after', delay = 0.4,
