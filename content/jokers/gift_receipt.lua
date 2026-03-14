@@ -13,7 +13,7 @@ Monarchy.Joker({
         return {vars = {card.ability.extra.chips}}
     end,
     calculate = function(self, card, context)
-        if context.selling_card and context.card.ability.set == 'Joker' then
+        if context.selling_card then
             SMODS.scale_card(card, {
                 ref_table = card.ability.extra,
                 ref_value = 'chips',
