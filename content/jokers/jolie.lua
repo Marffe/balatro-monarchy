@@ -8,7 +8,7 @@ Monarchy.Joker({
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
-    config = {extra = {rank = 'Queen', xmult = 2}},
+    config = {extra = {rank = 'Queen', xmult = 1.5}},
     loc_vars = function(self, info_queue, card)
         return {vars = {localize(card.ability.extra.rank, 'ranks'), card.ability.extra.xmult}}
     end,
