@@ -18,7 +18,7 @@ Monarchy.Joker({
             print('set')
             juice_card_until(card, function() return card.ability.extra.no_bought end)
         end
-        if context.buying_card then
+        if context.buying_card or context.open_booster then
             card.ability.extra.no_bought = nil
         end
         if context.ending_shop and card.ability.extra.no_bought then

@@ -210,7 +210,7 @@ local descriptions = {
             text = {
                     'This Joker gains {C:mult}+#2#{} Mult',
                     'if you exit a shop',
-                    '{C:attention}without buying{} any cards',
+                    '{C:attention}without buying{} anything',
                     '{C:inactive}(Currently {C:mult}+#1#{C:inactive})'
             }
         },
