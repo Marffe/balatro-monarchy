@@ -88,9 +88,6 @@ end
 
 Monarchy.mod.calculate = function(self, context)
     if context.after then
-        -- Vespertine Tracker
-        G.GAME.Monarchy.joker_values.vespertine_hand_count = #context.scoring_hand
-
         -- Clasped Cloak reset
         for _, pcard in ipairs(context.full_hand) do
             if pcard.ability.monarchy_clasped_cloak then
