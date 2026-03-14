@@ -28,6 +28,7 @@ Monarchy.Joker({
             end
             local goose_target = pseudorandom_element(G.hand.cards, 'monarchy_wild_goose')
             goose_target.ability.goosed = true
+            card.ability.extra.goosed = true
         end
         if context.individual and context.cardarea == G.play and context.other_card.ability.goosed then
             return {

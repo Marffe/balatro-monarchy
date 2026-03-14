@@ -33,3 +33,10 @@ function Tag:juice_up(_scale, _rot)
     end
     Monarchy.Hooks.tag_juice(self, _scale, _rot)
 end
+
+Monarchy.Hooks.copy_card = copy_card
+function copy_card(...)
+    local card = Monarchy.Hooks.copy_card(...)
+    if card.ability.goosed then card.ability.goosed = nil end
+    return card
+end
