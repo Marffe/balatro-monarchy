@@ -10,6 +10,7 @@ Monarchy.Joker({
     perishable_compat = true,
     display_size = {w = 71 * 0.7, h = 95 * 0.7},
     config = {extra = {chips = 25, gain = 25}},
+    attributes = {'chips'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.gain, (G.vouchers and #G.vouchers.cards or 0) * card.ability.extra.gain + card.ability.extra.chips}}
     end,

@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {dollars = 1, faces = 2, faces_left = 0}},
+    attributes = {'economy', 'face'},
     loc_vars = function(self, info_queue, card)
         return {vars = {localize('$')..card.ability.extra.dollars, card.ability.extra.faces}}
     end,

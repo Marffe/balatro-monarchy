@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {odds = 3}},
+    attributes = {'chance', 'hands', 'passive'},
     loc_vars = function(self, info_queue, card)
         local num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'monarchy_mechanics_grip')
         return {vars = {num, denom}}

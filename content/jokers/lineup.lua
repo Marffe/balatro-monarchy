@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {requirement = 3}},
+    attributes = {'tarot', 'discard', 'face'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.requirement, localize('k_face_cards'), localize({set = 'Tarot', key = 'c_hanged_man', type = 'name_text'})}}
     end,

@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {enhancement = 'm_gold', retriggers = 1}},
+    attributes = {'enhancements', 'retrigger'},
     loc_vars = function(self, info_queue, card)
         return {vars = {localize({set = 'Enhanced', key = card.ability.extra.enhancement, type = 'name_text'}), card.ability.extra.retriggers}}
     end,

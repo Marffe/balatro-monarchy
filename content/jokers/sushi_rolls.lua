@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {rounds = 3, price = 0, mod = 1}},
+    attributes = {'food', 'reroll', 'economy', 'passive'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.rounds, localize('$')..card.ability.extra.price}, key = card.ability.extra.rounds == 1 and 'j_monarchy_sushi_rolls_alt'}
     end,

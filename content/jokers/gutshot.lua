@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {retriggers = 4, hand = 'Straight'}},
+    attributes = {'retrigger', 'hand_type'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.retriggers, localize(card.ability.extra.hand, 'poker_hands')}}
     end,

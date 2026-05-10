@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {chance = 3, health = 3, mod = 1}},
+    attributes = {'food', 'chance', 'enhancements'},
     loc_vars = function(self, info_queue, card)
         local num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.chance, 'monarchy_gummy_bears')
         return {vars = {card.ability.extra.health, num, denom}, key = card.ability.extra.health == 1 and 'j_monarchy_gummy_bears_alt'}

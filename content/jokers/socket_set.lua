@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {mult = 6}},
+    attributes = {'mult', 'rank'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.mult, card.ability.extra.rank and localize(card.ability.extra.rank, 'ranks') or localize('monarchy_socket_set_default')}}
     end,

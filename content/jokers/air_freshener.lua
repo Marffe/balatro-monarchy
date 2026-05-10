@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {gain = 2}},
+    attributes = {'modify_card', 'chips', 'full_deck'},
     set_sprites = function(self, card)
         G.E_MANAGER:add_event(Event({
             func = function() 

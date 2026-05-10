@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {xmult = 2}},
+    attributes = {'xmult', 'hands', 'suit'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.xmult, card.ability.extra.wild_suit and localize('monarchy_watercolour_wild') or card.ability.extra.last_suit and localize(card.ability.extra.last_suit, 'suits_plural') or localize('monarchy_watercolour_default'), colours = {G.C.SUITS[card.ability.extra.last_suit] or G.ARGS.LOC_COLOURS.inactive}}}
     end,

@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {chips = 80, mult = 15, current = 'chips'}},
+    attributes = {'chips', 'mult'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.chips, card.ability.extra.mult, localize('monarchy_'..card.ability.extra.current), colours = {card.ability.extra.current == 'chips' and G.C.BLUE or G.C.RED}}}
     end,

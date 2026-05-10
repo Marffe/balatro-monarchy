@@ -10,7 +10,9 @@ Monarchy.Joker({
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
+    enhancement_gate = 'm_glass',
     config = {extra = {xmult = 2.5, odds = 3}},
+    attributes = {'enhancements', 'passive'},
     loc_vars = function(self, info_queue, card)
         local num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'monarchy_shattered')
         return {vars = {localize({set = 'Enhanced', key = 'm_glass', type = 'name_text'}), card.ability.extra.xmult, num, denom}}

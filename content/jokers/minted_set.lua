@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {xmult = 2}},
+    attributes = {'xmult', 'joker'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.xmult, localize('k_common'), localize('k_uncommon'), localize('k_rare'), colours = {G.C.RARITY[1], G.C.RARITY[2], G.C.RARITY[3]}}}
     end,

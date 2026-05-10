@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {ranks = {'Ace','2','3','4','5','6'}, xmult = 1.5, odds = 6}},
+    attributes = {'destroy_card', 'ace', 'two', 'three', 'four', 'five', 'six', 'rank', 'chance', 'xmult'},
     loc_vars = function(self, info_queue, card)
         local vars = {}
         for _, rank in ipairs(card.ability.extra.ranks) do

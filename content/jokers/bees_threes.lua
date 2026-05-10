@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {rank = 3, chips = 33, chance = 3, dollars = 3}},
+    attributes = {'chance', 'economy', 'chips', 'rank', 'three'},
     loc_vars = function(self, info_queue, card)
         local num, den = SMODS.get_probability_vars(card, 1, card.ability.extra.chance, 'monarchy_bees_threes')
         return {vars = {localize(tostring(card.ability.extra.rank), 'ranks'), card.ability.extra.chips, num, den, localize('$')..card.ability.extra.dollars}}

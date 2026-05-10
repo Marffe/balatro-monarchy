@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {odds = 3, key = 'm_stone'}},
+    attributes = {'space', 'chance', 'enhancements'},
     loc_vars = function(self, info_queue, card)
         return {vars = {localize({set = 'Enhanced', key = card.ability.extra.key, type = 'name_text'}), localize('k_celestial_pack'), SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'monarchy_meteor_shower')}}
     end,

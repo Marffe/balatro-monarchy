@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {xmult = 1, gain = 1, level = 5}},
+    attributes = {'xmult', 'space'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.gain, card.ability.extra.level, card.ability.extra.xmult + card.ability.extra.gain * self:count_poker_hands(card)}}
     end,

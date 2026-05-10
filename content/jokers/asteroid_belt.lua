@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {chips = 12, level = 1}},
+    attributes = {'chips', 'space'},
     loc_vars = function(self, info_queue, card)
         
         return {vars = {card.ability.extra.chips, card.ability.extra.level, card.ability.extra.chips * self:count_poker_hands(card)}}

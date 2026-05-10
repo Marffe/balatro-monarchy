@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {hand = 'Straight', ranks = {'Ace', '5'}, mult = 20}},
+    attributes = {'mult', 'hand_type', 'rank', 'ace', 'five'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.mult, localize(card.ability.extra.hand, 'poker_hands'), localize(card.ability.extra.ranks[1], 'ranks'), localize(card.ability.extra.ranks[2], 'ranks')}}
     end,

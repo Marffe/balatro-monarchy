@@ -9,11 +9,12 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {rank = 'Queen', xmult = 1.5}},
+    attributes = {'queen', 'rank', 'xmult'},
     loc_vars = function(self, info_queue, card)
         return {vars = {localize(card.ability.extra.rank, 'ranks'), card.ability.extra.xmult}}
     end,
     calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.play and  context.other_card.base.value == card.ability.extra.rank and not next(SMODS.get_enhancements(context.other_card)) then
+        if context.individual and context.cardarea == G.play and context.other_card.base.value == card.ability.extra.rank and not next(SMODS.get_enhancements(context.other_card)) then
             return {
                 xmult = card.ability.extra.xmult
             }

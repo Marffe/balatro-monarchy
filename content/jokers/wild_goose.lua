@@ -9,6 +9,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {xmult = 2}},
+    attributes = {'xmult'},
     remove_goose_target = function(self, card)
         for _, _card in ipairs(G.playing_cards) do
             if _card.ability.goosed then

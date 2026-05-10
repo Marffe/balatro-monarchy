@@ -10,6 +10,7 @@ Monarchy.Joker({
     eternal_compat = true,
     perishable_compat = true,
     config = {extra = {odds = 3, sets = {Tarot = 'k_tarot', Planet = 'k_planet'}}},
+    attributes = {'chance', 'tarot', 'planet', 'passive'},
     loc_vars = function(self, info_queue, card)
         local num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'monarchy_negative_film')
         return {vars = {localize(card.ability.extra.sets.Tarot), localize(card.ability.extra.sets.Planet), num, denom, localize({set = 'Edition', key = 'e_negative', type = 'name_text'}), colours = {G.C.SECONDARY_SET.Tarot, G.C.SECONDARY_SET.Planet}}}

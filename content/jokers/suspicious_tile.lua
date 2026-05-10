@@ -8,8 +8,10 @@ Monarchy.Joker({
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
-        display_size = {w = 71 * 0.55, h = 95 * 0.55},
+    display_size = {w = 71 * 0.55, h = 95 * 0.55},
+    enhancement_gate = 'm_wild',
     config = {extra = {enhancement = 'm_wild'}},
+    attributes = {'enhancements'},
     loc_vars = function(self, info_queue, card)
         return {vars = {localize({set = 'Enhanced', key = card.ability.extra.enhancement, type = 'name_text'})}}
     end,
