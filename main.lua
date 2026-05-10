@@ -25,4 +25,8 @@ load_files('/content/')
 
 Monarchy.Functions.set_globals()
 
+Monarchy.mod.optional_features = {
+    object_weights = true
+}
+
 print('[Monarchy] - Loaded successfully')

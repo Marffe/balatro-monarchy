@@ -119,8 +119,7 @@ Monarchy.Tag({
                 G.E_MANAGER:add_event(Event({
                     trigger = 'after', delay = i>1 and 0.7 or 0,
                     func = function()
-                        print "spawn food joker - reminder to stop being lazy and implement pools properly into smods T_T"
-                        local c = SMODS.add_card({set = 'Joker'})
+                        local c = SMODS.add_card({attributes = {tag.config.extra.pool}})
                         c:start_materialize()
                         G.GAME.joker_buffer = G.GAME.joker_buffer - 1
                         return true
