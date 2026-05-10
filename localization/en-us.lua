@@ -525,6 +525,47 @@ local descriptions = {
                 'when they score'
             }
         },
+    },
+    Blind = {
+        slate = {
+            name = 'The Slate',
+            text = {
+                '{C:attention}Enhanced{} cards',
+                'are debuffed'
+            }
+        },
+        underdog = {
+            name = 'The Underdog',
+            text = {
+                'Cards played {C:attention}#1#{} or more', 
+                'times are debuffed'
+            }
+        },
+        anchor = {
+            name = 'The Anchor',
+            text = {
+                'Cards in the {C:attention}bottom half',
+                'of your deck get',
+                'drawn face down'
+            }
+        },
+        blur = {
+            name = 'The Blur',
+            text = {
+                'Required score is increased', 
+                'for each Blind skipped',
+                'this run'
+            }
+        },
+        loop = {
+            name = 'The Loop',
+            text = {
+                'Played or discarded cards',
+                'have a {C:green}#1# in #2#',
+                'chance to return to',
+                'your hand debuffed'
+            }
+        },
     }
 }
 

@@ -102,3 +102,12 @@ function Monarchy.Functions.add_voucher(voucher_key, seed)
         end
     }))
 end
+
+function Monarchy.Functions.undebuff(match_key)
+    for _, card in ipairs(G.playing_cards) do
+        if card.ability.debuffed_by == match_key then 
+            card:set_debuff()
+            card.ability.debuffed_by = nil
+        end
+    end
+end

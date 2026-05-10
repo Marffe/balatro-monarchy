@@ -1,0 +1,18 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+# Move blind messages to center of screen
+[[patches]]
+[patches.pattern]
+target = 'functions/common_events.lua'
+match_indent = true
+position = 'before'
+pattern = '''
+elseif card.jimbo  then
+'''
+payload = '''
+elseif card == G.play then
+    y_off = -1.5 * G.CARD_H
+'''
