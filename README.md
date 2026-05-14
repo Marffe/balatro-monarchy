@@ -1,6 +1,6 @@
 ![monarchytitle](monarchytitleblack.png)
 
-# Monarchy || Jokers & Consumables || Steamodded v1.0.0+
+# Monarchy || Jokers & Consumables || Steamodded
 
 A Vanilla+ Balatro mod that expands on the base game, and opens new avenues to play. (Original Art & Idea by itsmythie, Code by Eremel)
 Please keep in mind that the mod is still in development, and is subject to change.
