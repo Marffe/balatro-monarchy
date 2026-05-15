@@ -30,3 +30,9 @@ function Game:main_menu(change_context)
         }
     }})
 end
+
+Monarchy.mod.menu_cards = function()
+	return {
+		{key = 'j_monarchy_daifugo'},
+	}
+end
