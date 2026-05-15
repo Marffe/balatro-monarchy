@@ -35,6 +35,24 @@ local loc_table = {
             monarchy_abberant_trigger = 'Abberant!',
             monarchy_anchor_active = 'Aweigh!',
             monarchy_anchor_primed = 'Let go!',
+        },
+        collab_palettes = {
+            monarchy_spades = {
+                'Low Contrast Colours',
+                'High Contrast Colours',
+            },
+            monarchy_clubs = {
+                'Low Contrast Colours',
+                'High Contrast Colours',
+            },
+            monarchy_hearts = {
+                'Low Contrast Colours',
+                'High Contrast Colours',
+            },
+            monarchy_diamonds = {
+                'Low Contrast Colours',
+                'High Contrast Colours',
+            }
         }
     },
     descriptions = {}

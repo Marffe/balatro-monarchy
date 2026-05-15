@@ -36,3 +36,97 @@ Monarchy.mod.menu_cards = function()
 		{key = 'j_monarchy_daifugo'},
 	}
 end
+
+SMODS.Atlas {
+	key = "deck_skin",
+	path = "monarchdeck.png",
+	px = 71,
+	py = 95
+}
+
+SMODS.Atlas {
+	key = "deck_skin_HC",
+	path = "monarchdeck_HC.png",
+	px = 71,
+	py = 95
+}
+
+SMODS.DeckSkin {
+    key = 'spades',
+    suit = 'Spades',
+    loc_txt = 'Monarchy',
+    palettes = {
+        {
+            key = 'monarchy_spades_lc',
+            ranks = {'Jack', 'Queen', 'King', 'Ace'},
+            display_ranks = {'Ace', 'King', 'Queen', 'Jack'},
+            atlas = 'monarchy_deck_skin'
+        },
+        {
+            key = 'monarchy_spades_hc',
+            ranks = {'Jack', 'Queen', 'King', 'Ace'},
+            display_ranks = {'Ace', 'King', 'Queen', 'Jack'},
+            atlas = 'monarchy_deck_skin_HC',
+        }
+    }
+}
+
+SMODS.DeckSkin {
+    key = 'clubs',
+    suit = 'Clubs',
+    loc_txt = 'Monarchy',
+    palettes = {
+        {
+            key = 'monarchy_clubs_lc',
+            ranks = {'Jack', 'Queen', 'King', 'Ace'},
+            display_ranks = {'Ace', 'King', 'Queen', 'Jack'},
+            atlas = 'monarchy_deck_skin'
+        },
+        {
+            key = 'monarchy_clubs_hc',
+            ranks = {'Jack', 'Queen', 'King', 'Ace'},
+            display_ranks = {'Ace', 'King', 'Queen', 'Jack'},
+            atlas = 'monarchy_deck_skin_HC',
+        }
+    }
+}
+
+SMODS.DeckSkin {
+    key = 'hearts',
+    suit = 'Hearts',
+    loc_txt = 'Monarchy',
+    palettes = {
+        {
+            key = 'monarchy_hearts_lc',
+            ranks = {'Jack', 'Queen', 'King', 'Ace'},
+            display_ranks = {'Ace', 'King', 'Queen', 'Jack'},
+            atlas = 'monarchy_deck_skin'
+        },
+        {
+            key = 'monarchy_hearts_hc',
+            ranks = {'Jack', 'Queen', 'King', 'Ace'},
+            display_ranks = {'Ace', 'King', 'Queen', 'Jack'},
+            atlas = 'monarchy_deck_skin_HC',
+        }
+    }
+}
+
+SMODS.DeckSkin {
+    key = 'diamonds',
+    suit = 'Diamonds',
+    loc_txt = 'Monarchy',
+    palettes = {
+        {
+            key = 'monarchy_diamonds_lc',
+            ranks = {'Jack', 'Queen', 'King', 'Ace'},
+            display_ranks = {'Ace', 'King', 'Queen', 'Jack'},
+            atlas = 'monarchy_deck_skin'
+        },
+        {
+            key = 'monarchy_diamonds_hc',
+            ranks = {'Jack', 'Queen', 'King', 'Ace'},
+            display_ranks = {'Ace', 'King', 'Queen', 'Jack'},
+            atlas = 'monarchy_deck_skin_HC',
+        }
+    }
+}
