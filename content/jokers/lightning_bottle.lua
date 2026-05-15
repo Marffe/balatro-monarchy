@@ -14,7 +14,7 @@ Monarchy.Joker({
         return {vars = {localize({set = 'Enhanced', key = 'm_mult', type = 'name_text'})}}
     end,
     calculate = function(self, card, context)
-        if context.drawing_cards then
+        if context.drawing_cards and G.STATE ~= G.STATES.SMODS_BOOSTER_OPENED then
             local moved = 0
             for i=#G.deck.cards, 1, -1 do
                 if SMODS.has_enhancement(G.deck.cards[i], 'm_mult') then
