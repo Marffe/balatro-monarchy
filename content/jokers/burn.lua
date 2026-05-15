@@ -17,7 +17,11 @@ Monarchy.Joker({
         if context.setting_blind then
             for i=1, #G.deck.cards do
                 if not G.deck.cards[i].getting_sliced then
-                    SMODS.destroy_cards(G.deck.cards[i])
+                    local destroy_card = G.deck.cards[i]
+                    draw_card(G.deck, G.play, nil, nil, nil, destroy_card)
+                    delay(1)
+                    SMODS.destroy_cards(destroy_card)
+                    juice_card(card)
                     return {
                         dollars = card.ability.extra.dollars
                     }
