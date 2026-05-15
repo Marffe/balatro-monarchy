@@ -16,7 +16,7 @@ Monarchy.Joker({
     create_card = function(self, card)
         if SMODS.pseudorandom_probability(card, 'monarchy_meteor_shower', 1, card.ability.extra.odds) then
             juice_card(card)
-            return SMODS.create_card({set = 'Enhanced', key = card.ability.extra.key, edition = SMODS.poll_edition({guaranteed = true, key = 'monarchy_meteor_shower_edition'})})
+            return SMODS.create_card({set = 'Enhanced', key = card.ability.extra.key, edition = SMODS.poll_edition({guaranteed = true, no_negative = true, key = 'monarchy_meteor_shower_edition'})})
         end
     end
 })
