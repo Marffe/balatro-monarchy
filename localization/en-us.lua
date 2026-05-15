@@ -141,7 +141,7 @@ local descriptions = {
             }
         },
         gift_receipt = {
-            name = 'Gift Receipt',
+            name = 'Crinkled Receipt',
             text = {
                 'When a {C:attention}Joker{} is {C:attention}sold{},',
                 'permanently add {C:attention}double',
