@@ -378,10 +378,9 @@ local descriptions = {
         vespertine = {
             name = 'Vespertine',
             text = {
-                'This Joker gives {C:mult}+#1#{} Mult',
-                'for each {C:attention}scoring card{}',
-                'in the last hand',
-                '{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)'
+                'All played cards in', 
+                '{C:attention}final hand{} of round',
+                'give {C:red}+#1#{} Mult'
             }
         },
         walkman = {
