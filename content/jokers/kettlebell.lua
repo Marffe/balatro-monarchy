@@ -7,7 +7,7 @@ Monarchy.Joker({
     discovered = false,
     blueprint_compat = true,
     eternal_compat = true,
-    perishable_compat = true,
+    perishable_compat = false,
     config = {extra = {mult = 0, gain = 5}},
     attributes = {'mult', 'scaling'},
     loc_vars = function(self, info_queue, card)

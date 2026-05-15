@@ -6,7 +6,7 @@ Monarchy.Joker({
     unlocked = true,
     discovered = false,
     blueprint_compat = true,
-    eternal_compat = true,
+    eternal_compat = false,
     perishable_compat = true,
     config = {extra = {chance = 3, health = 3, mod = 1}},
     attributes = {'food', 'chance', 'enhancements'},
