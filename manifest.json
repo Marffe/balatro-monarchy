@@ -9,8 +9,8 @@
     "badge_text_colour": "FFFFFF",
     "display_name": "Monarchy",
     "dependencies": [
-        "Steamodded (>=1.0.0~BETA-1503a)"
+        "Steamodded (>=1.0.0~BETA-1620a)"
     ],
     "version": "1.0.0",
-    "priority": -2
+    "priority": 0
 }
