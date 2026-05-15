@@ -394,9 +394,9 @@ local descriptions = {
         watercolour = {
             name = 'Watercolour Joker',
             text = {
-                '{C:white,X:red}X#1#{} Mult if',
-                '{C:attention}first scored card{} is a',
-                '{C:attention}different{} suit to the last hand\'s',
+                '{C:white,X:red}X#1#{} Mult if {C:attention}first',
+                '{C:attention}scored card{} is a {C:attention}different',
+                'suit to the last hand\'s',
                 '{C:inactive,s:0.9}(Last suit: {V:1,s:0.9}#2#{C:inactive,s:0.9})'
             }
         },
