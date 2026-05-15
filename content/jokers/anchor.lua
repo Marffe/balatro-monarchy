@@ -15,9 +15,19 @@ Monarchy.Joker({
     end,
     calculate = function(self, card, context)
         if context.setting_blind then
-            for i = math.ceil(#G.deck.cards/2), #G.deck.cards do
-                G.deck.cards[i].ability.monarchy_anchor = true
-            end
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    G.E_MANAGER:add_event(Event({
+                        func = function()
+                            for i = math.ceil(#G.deck.cards/2), 1, -1 do
+                                G.deck.cards[i].ability.monarchy_anchor = true
+                            end
+                            return true
+                        end
+                    }))
+                    return true
+                end
+            }))
             card.ability.extra.primed = true
             return {
                 message = localize('monarchy_anchor_primed'),
