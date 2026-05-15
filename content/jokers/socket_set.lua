@@ -17,7 +17,7 @@ Monarchy.Joker({
         card.ability.extra.rank = card.ability.extra.rank or Monarchy.Functions.rank_from_deck(nil, true)
     end,
     calculate = function(self, card, context)
-        if context.end_of_round and context.main_eval then
+        if context.end_of_round and context.main_eval and not context.blueprint then
             card.ability.extra.rank = Monarchy.Functions.rank_from_deck(nil, true)
             return {
                 message = localize(card.ability.extra.rank, 'ranks')

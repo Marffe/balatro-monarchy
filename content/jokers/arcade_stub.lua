@@ -20,7 +20,7 @@ Monarchy.Joker({
                 chips = (G.vouchers and #G.vouchers.cards or 0) * card.ability.extra.gain + card.ability.extra.chips
             }
         end
-        if context.buying_card and context.card.ability.set == 'Voucher' then
+        if context.buying_card and context.card.ability.set == 'Voucher' and not context.blueprint then
             return {
                 message = localize('k_upgrade_ex'),
                 colour = G.C.BLUE

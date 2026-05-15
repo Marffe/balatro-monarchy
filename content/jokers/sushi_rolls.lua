@@ -5,7 +5,7 @@ Monarchy.Joker({
     cost = 5,
     unlocked = true,
     discovered = false,
-    blueprint_compat = true,
+    blueprint_compat = false,
     eternal_compat = false,
     perishable_compat = true,
     config = {extra = {rounds = 3, price = 0, mod = 1}},

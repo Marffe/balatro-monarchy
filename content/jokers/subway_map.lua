@@ -25,7 +25,7 @@ Monarchy.Joker({
         return count
     end,
     calculate = function(self, card, context)
-        if context.before then
+        if context.before and not context.blueprint then
             local suits = self:count_suits(context.scoring_hand)
             if suits > 1 then
                 SMODS.scale_card(card, {

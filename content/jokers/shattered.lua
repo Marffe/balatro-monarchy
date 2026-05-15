@@ -7,7 +7,7 @@ Monarchy.Joker({
     cost = 5,
     unlocked = true,
     discovered = false,
-    blueprint_compat = true,
+    blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
     enhancement_gate = 'm_glass',

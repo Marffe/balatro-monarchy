@@ -5,7 +5,7 @@ Monarchy.Joker({
     cost = 5,
     unlocked = true,
     discovered = false,
-    blueprint_compat = true,
+    blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
     display_size = {w = 71 * 0.55, h = 95 * 0.55},
