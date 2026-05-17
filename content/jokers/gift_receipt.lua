@@ -19,7 +19,10 @@ Monarchy.Joker({
                 ref_table = card.ability.extra,
                 ref_value = 'chips',
                 scalar_table = context.card,
-                scalar_value = 'cost',
+                scalar_value = 'sell_cost',
+                operation = function(ref_table, ref_value, initial, scaling)
+                    ref_table[ref_value] = initial + scaling + scaling
+                end,
                 scaling_message = {
                     message = localize('monarchy_returned'),
                     colour = G.C.BLUE
