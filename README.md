@@ -9,6 +9,6 @@ Join the [Discord Server](https://discord.gg/uxwx95Z3SY) for updates on the mod 
 
 Take a Look at the [Wiki Page](https://balatromods.miraheze.org/wiki/Monarchy) if you're confused, for more info on all of the content!
 
-See [Releases] for the official working releases.
+See [Releases](https://github.com/itsmythie/balatro-monarchy/releases/tag/pack-1) for the official working releases.
 
 Thank you for checking out my mod!
