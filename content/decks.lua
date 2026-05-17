@@ -69,10 +69,15 @@ Monarchy.Back({
         for _, voucher in ipairs(card.effect.config.extra.vouchers) do
             Monarchy.Functions.add_voucher(voucher)
         end
+        G.E_MANAGER:add_event(Event({
+            func = function()
+                G.STATE = G.STATES.BLIND_SELECT
+                return true
+            end
+        }))
         G.GAME.interest_cap = G.GAME.interest_cap + (card.effect.config.extra.interest * 5)
     end,
 })
-
 
 Monarchy.Back({
     key = 'sparkle',
@@ -85,6 +90,12 @@ Monarchy.Back({
         for _, voucher in ipairs(card.effect.config.extra.vouchers) do
             Monarchy.Functions.add_voucher(voucher)
         end
+        G.E_MANAGER:add_event(Event({
+            func = function()
+                G.STATE = G.STATES.BLIND_SELECT
+                return true
+            end
+        }))
     end,
     calculate = function(self, card, context)
         if context.end_of_round and context.main_eval then
