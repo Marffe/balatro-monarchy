@@ -78,6 +78,7 @@ function Monarchy.Functions.add_voucher(voucher_key, seed)
             voucher_key = pseudorandom_element(voucher_pool, seed..it)
         end
     end
+    G.GAME.used_vouchers[voucher_key] = true
     G.E_MANAGER:add_event(Event({
         trigger = 'after', delay = 0.5,
         func = function()
