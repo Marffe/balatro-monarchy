@@ -67,6 +67,7 @@ SMODS.DeckSkin {
             ranks = {'Jack', 'Queen', 'King', 'Ace'},
             display_ranks = {'Ace', 'King', 'Queen', 'Jack'},
             atlas = 'monarchy_deck_skin_HC',
+            hc_default = true
         }
     }
 }
@@ -87,6 +88,7 @@ SMODS.DeckSkin {
             ranks = {'Jack', 'Queen', 'King', 'Ace'},
             display_ranks = {'Ace', 'King', 'Queen', 'Jack'},
             atlas = 'monarchy_deck_skin_HC',
+            hc_default = true
         }
     }
 }
@@ -107,6 +109,7 @@ SMODS.DeckSkin {
             ranks = {'Jack', 'Queen', 'King', 'Ace'},
             display_ranks = {'Ace', 'King', 'Queen', 'Jack'},
             atlas = 'monarchy_deck_skin_HC',
+            hc_default = true
         }
     }
 }
@@ -127,6 +130,7 @@ SMODS.DeckSkin {
             ranks = {'Jack', 'Queen', 'King', 'Ace'},
             display_ranks = {'Ace', 'King', 'Queen', 'Jack'},
             atlas = 'monarchy_deck_skin_HC',
+            hc_default = true
         }
     }
 }
