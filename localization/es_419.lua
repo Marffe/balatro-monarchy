@@ -191,7 +191,7 @@ local descriptions = {
         iron_cross = {
             name = 'Cruz de Hierro',
             text = {
-                'Las {C:attention}#1#{} jugadas',
+                'Las {C:attention}Cartas de Acero{} jugadas',
                 'ganan {C:white,X:red}X#2#{} Multi para su',
                 'efecto al ser anotadas'
             }
