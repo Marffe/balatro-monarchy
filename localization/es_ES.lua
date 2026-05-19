@@ -15,10 +15,10 @@ local loc_table = {
             monarchy_air_freshener_flavour_65 = 'Plátanos',
             monarchy_air_freshener_flavour_75 = 'Helado',
             monarchy_air_freshener_flavour_85 = 'Ramen',
-            monarchy_air_freshener_flavour_95 = 'Anguilas',
+            monarchy_air_freshener_flavour_95 = 'Sushi',
             monarchy_air_freshener_flavour_56 = 'Los 80s',
             monarchy_air_freshener_flavour_66 = 'Café',
-            monarchy_air_freshener_flavour_76 = 'Ardiendo',
+            monarchy_air_freshener_flavour_76 = 'Quemado',
             monarchy_air_freshener_flavour_86 = 'Sudor',
             monarchy_air_freshener_flavour_96 = 'Huevos',
             monarchy_socket_set_default = 'carta enumerada',
@@ -46,8 +46,8 @@ local descriptions = {
             name = 'Ambientador',
             text = {
                 'Al seleccionar una {C:attention}Ciega{},',
-                'todas las {C:attention}cartas{} del mazo',
-                'ganan {C:blue}+#1#{} Fichas',
+                'todas las {C:attention}cartas{} de la',
+                'baraja ganan {C:blue}+#1#{} Fichas',
                 '{C:inactive,s:0.8}Huele a {C:dark_edition,s:0.8}#2#{C:inactive,s:0.8}...'
             }
         },
@@ -109,8 +109,8 @@ local descriptions = {
         can_of_snakes = {
             name = 'Lata de Serpientes',
             text = {
-                'Otorga {C:blue}+#1#{} Fichas, {C:red}+#2#{} Multi o',
-                '{C:money}#3#{} en la {C:attention}primera mano{}',
+                'Otorga {C:blue}+#1#{} Fichas, {C:red}+#2#{} Multi',
+                'o{C:money}#3#{} en la {C:attention}primera mano{}',
                 'de la ronda'
             }
         },
@@ -142,8 +142,8 @@ local descriptions = {
             name = 'Recibo de Regalo',
             text = {
                 'Al {C:attention}vender{} un {C:attention}Comodín{}, obtiene',
-                'el {C:attention}doble{} de su {C:money}valor{}',
-                '{C:money}de venta{} como {C:chips}Fichas',
+                'el {C:attention}doble{} de su {C:money}valor de venta{}',
+                'como {C:chips}Fichas',
                 '{C:inactive}(Actualmente {C:blue}+#1#{C:inactive})'
             }
         },
@@ -221,7 +221,7 @@ local descriptions = {
             }
         },
         library = {
-            name = 'Tarjeta de Biblioteca',
+            name = 'Tarjeta de la Biblioteca',
             text = {
                 '{C:mult}+#1#{} Multi por cada',
                 '{C:attention}Consumible{} que poseas',
@@ -232,12 +232,12 @@ local descriptions = {
             name = 'Botella de Relámpago',
             text = {
                 'Las {C:attention}#1#s{} siempre se',
-                'sacan en tu {C:attention}mano inicial{}',
-                'y se reactivan al ser {C:attention}anotadas{}'
+                'sacan en tu {C:attention}mano inicial{} y se',
+                '{C:attention}reactivan{} al ser {C:attention}anotadas{}'
             }
         },
         lineup = {
-            name = 'Rueda de Reconocimiento',
+            name = 'Rueda de sospechosos',
             text = {
                 'Obtienes una copia de {C:tarot}#3#{}',
                 'si el {C:attention}primer descarte{} contiene',
@@ -289,7 +289,7 @@ local descriptions = {
             name = 'Última Bala',
             text = {
                 '{C:white,X:red}X#1#{} Multi, sólo puedes',
-                'juegar {C:attention}1{} {C:blue}Mano{}'
+                'jugar {C:attention}1{} {C:blue}Mano{}'
             }
         },
         old_sailor = {
@@ -312,8 +312,8 @@ local descriptions = {
             name = 'Comodín Roto',
             text = {
                 'Las {C:attention}#1#s{} otorgan',
-                "{C:white,X:red}X#2#{} Multi pero su",
-                'prob. de {C:red}destruirse{} es {C:green}#3# en #4#',
+                "{C:white,X:red}X#2#{} Multi pero su prob.",
+                'de {C:red}destruirse{} es de {C:green}#3# en #4#',
             }
         },
         slinky = {
@@ -367,8 +367,8 @@ local descriptions = {
         suspicious_tile = {
             name = 'Ficha Sospechosa',
             text = {
-                'Las {C:attention}#1#es{} pueden usarse para',
-                'completar {C:attention}Tercias{}, {C:attention}Póker{}',
+                'Las {C:attention}#1#es{} pueden usarse',
+                'para completar {C:attention}Tercias{}, {C:attention}Póker{}',
                 'y {C:attention}Escalera de Color{}'
             }
         },
@@ -417,9 +417,9 @@ local descriptions = {
         wingman = {
             name = 'Wingman',
             text = {
-                'Gana {C:white,X:red}X#3#{} Multi si la',
-                'mano es exactamente un {C:attention}#1# de #2#{},',
-                'se reinicia al derrotar una {C:attention}Ciega Jefe{}',
+                'Gana {C:white,X:red}X#3#{} Multi si la mano es',
+                'exactamente un {C:attention}#1# de #2#{}, se',
+                'reinicia al derrotar una {C:attention}Ciega Jefe{}',
                 '{C:inactive,s:0.9}(Actualmente {C:white,X:red,s:0.9}X#4#{C:inactive,s:0.9} Multi)'
             }
         },
