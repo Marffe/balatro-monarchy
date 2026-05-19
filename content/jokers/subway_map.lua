@@ -7,7 +7,7 @@ Monarchy.Joker({
     discovered = false,
     blueprint_compat = true,
     eternal_compat = true,
-    perishable_compat = true,
+    perishable_compat = false,
     config = {extra = {chips = 0, gain = 6}},
     attributes = {'chips', 'scaling', 'reset', 'suit'},
     loc_vars = function(self, info_queue, card)
@@ -25,7 +25,7 @@ Monarchy.Joker({
         return count
     end,
     calculate = function(self, card, context)
-        if context.before then
+        if context.before and not context.blueprint then
             local suits = self:count_suits(context.scoring_hand)
             if suits > 1 then
                 SMODS.scale_card(card, {

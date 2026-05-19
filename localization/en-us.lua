@@ -35,6 +35,24 @@ local loc_table = {
             monarchy_abberant_trigger = 'Abberant!',
             monarchy_anchor_active = 'Aweigh!',
             monarchy_anchor_primed = 'Let go!',
+        },
+        collab_palettes = {
+            monarchy_spades = {
+                'Low Contrast Colours',
+                'High Contrast Colours',
+            },
+            monarchy_clubs = {
+                'Low Contrast Colours',
+                'High Contrast Colours',
+            },
+            monarchy_hearts = {
+                'Low Contrast Colours',
+                'High Contrast Colours',
+            },
+            monarchy_diamonds = {
+                'Low Contrast Colours',
+                'High Contrast Colours',
+            }
         }
     },
     descriptions = {}
@@ -141,7 +159,7 @@ local descriptions = {
             }
         },
         gift_receipt = {
-            name = 'Gift Receipt',
+            name = 'Crinkled Receipt',
             text = {
                 'When a {C:attention}Joker{} is {C:attention}sold{},',
                 'permanently add {C:attention}double',
@@ -378,10 +396,9 @@ local descriptions = {
         vespertine = {
             name = 'Vespertine',
             text = {
-                'This Joker gives {C:mult}+#1#{} Mult',
-                'for each {C:attention}scoring card{}',
-                'in the last hand',
-                '{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)'
+                'All played cards in', 
+                '{C:attention}final hand{} of round',
+                'give {C:red}+#1#{} Mult'
             }
         },
         walkman = {
@@ -395,9 +412,9 @@ local descriptions = {
         watercolour = {
             name = 'Watercolour Joker',
             text = {
-                '{C:white,X:red}X#1#{} Mult if',
-                '{C:attention}first scored card{} is a',
-                '{C:attention}different{} suit to the last hand\'s',
+                '{C:white,X:red}X#1#{} Mult if {C:attention}first',
+                '{C:attention}scored card{} is a {C:attention}different',
+                'suit to the last hand\'s',
                 '{C:inactive,s:0.9}(Last suit: {V:1,s:0.9}#2#{C:inactive,s:0.9})'
             }
         },

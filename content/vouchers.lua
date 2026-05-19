@@ -58,13 +58,17 @@ Monarchy.Voucher({
     end,
     calculate = function(self, card, context)
         if context.starting_shop then
+            card.ability.extra.active = true            
             card.ability.extra.current = 0
-            card.ability.extra.active = true
+        end
+        if context.ending_shop then
+            card.ability.extra.active = false
         end
         if (context.reroll_shop or context.buying_card or context.open_booster) and card.ability.extra.active then
             card.ability.extra.current = card.ability.extra.current + (context.cost or 0)+ (context.card and context.card.cost or 0)
             if card.ability.extra.current >= card.ability.extra.target then
-                card.ability.extra.active = false
+                card.ability.extra.active = true
+                card.ability.extra.current = card.ability.extra.current % card.ability.extra.target
                 Monarchy.Functions.add_tag(nil, 'monarchy_first_class')
                 return {
                     message = 'First Class!',
@@ -73,7 +77,8 @@ Monarchy.Voucher({
             end
             return {
                 message = card.ability.extra.current .. '/' .. card.ability.extra.target,
-                colour = G.C.GOLD
+                colour = G.C.GOLD,
+                delay = 1.5
             }
         end
     end

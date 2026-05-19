@@ -18,7 +18,7 @@ Monarchy.Joker({
             local rank = 100
             local target = nil
             for i=#G.hand.cards, 1, -1 do
-                if rank >= G.hand.cards[i].base.id and not SMODS.has_no_rank(G.hand.cards[i]) then rank = G.hand.cards[i].base.id; target = G.hand.cards[i] end
+                if rank >= G.hand.cards[i].base.id and not SMODS.has_no_rank(G.hand.cards[i]) and not G.hand.cards[i].monarchy_daifugo then rank = G.hand.cards[i].base.id; target = G.hand.cards[i] end
             end
             target.monarchy_daifugo = true
             G.E_MANAGER:add_event(Event({
@@ -28,10 +28,11 @@ Monarchy.Joker({
                     return true
                 end
             }))
+            local message_target = context.blueprint_card or card
             return {
                 dollars = card.ability.extra.dollars,
                 message_card = target,
-                juice_card = card,
+                juice_card = message_target,
                 func = function()
                     local vals_after_level
                         vals_after_level = copy_table(G.GAME.current_round.current_hand)
@@ -41,11 +42,10 @@ Monarchy.Joker({
                         for name, p in pairs(SMODS.Scoring_Parameters) do
                             vals_after_level[name] = p.current
                         end
-                    SMODS.calculate_effect({message = 'Discarded!', colour = G.C.RED, message_card = target, juice_card = card}, target)
+                    SMODS.calculate_effect({message = 'Discarded!', colour = G.C.RED, message_card = target, juice_card = message_target}, target)
                     G.hand.highlighted = {target}
                     G.FUNCS.discard_cards_from_highlighted(nil, true)
                     update_hand_text({immediate = true, nopulse = true, delay = 0}, vals_after_level)
-                    -- draw_card(G.hand, G.discard, nil, 'down', false, target, 0.6)
                     G.E_MANAGER:add_event(Event({
                         trigger = 'after', delay = 0.4,
                         func = function()

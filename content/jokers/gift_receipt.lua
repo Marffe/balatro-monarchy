@@ -7,19 +7,22 @@ Monarchy.Joker({
     discovered = false,
     blueprint_compat = true,
     eternal_compat = true,
-    perishable_compat = true,
+    perishable_compat = false,
     config = {extra = {chips = 0}},
     attributes = {'chips', 'scaling'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.chips}}
     end,
     calculate = function(self, card, context)
-        if context.selling_card then
+        if context.selling_card and not context.blueprint then
             SMODS.scale_card(card, {
                 ref_table = card.ability.extra,
                 ref_value = 'chips',
                 scalar_table = context.card,
-                scalar_value = 'cost',
+                scalar_value = 'sell_cost',
+                operation = function(ref_table, ref_value, initial, scaling)
+                    ref_table[ref_value] = initial + scaling + scaling
+                end,
                 scaling_message = {
                     message = localize('monarchy_returned'),
                     colour = G.C.BLUE

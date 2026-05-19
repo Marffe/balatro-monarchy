@@ -26,7 +26,7 @@ Monarchy.Joker({
                     message_colour = G.C.RED
                 })
             end
+            return nil, true
         end
-        return nil, true
     end,
 })

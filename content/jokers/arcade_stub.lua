@@ -7,7 +7,7 @@ Monarchy.Joker({
     discovered = false,
     blueprint_compat = true,
     eternal_compat = true,
-    perishable_compat = true,
+    perishable_compat = false,
     display_size = {w = 71 * 0.7, h = 95 * 0.7},
     config = {extra = {chips = 25, gain = 25}},
     attributes = {'chips'},
@@ -20,7 +20,7 @@ Monarchy.Joker({
                 chips = (G.vouchers and #G.vouchers.cards or 0) * card.ability.extra.gain + card.ability.extra.chips
             }
         end
-        if context.buying_card and context.card.ability.set == 'Voucher' then
+        if context.buying_card and context.card.ability.set == 'Voucher' and not context.blueprint then
             return {
                 message = localize('k_upgrade_ex'),
                 colour = G.C.BLUE

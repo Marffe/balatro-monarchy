@@ -23,20 +23,21 @@ Monarchy.Joker({
         return {vars = {card.ability.extra.xmult}}
     end,
     calculate = function(self, card, context)
-        if context.hand_drawn then
-            if card.ability.extra.goosed then
-                self:remove_goose_target(card)
-            end
+        if context.hand_drawn and not card.ability.extra.goosed then
             local goose_target = pseudorandom_element(G.hand.cards, 'monarchy_wild_goose')
             goose_target.ability.goosed = true
             card.ability.extra.goosed = true
         end
         if context.individual and context.cardarea == G.play and context.other_card.ability.goosed then
+            self:remove_goose_target(card)
             return {
                 xmult = card.ability.extra.xmult
             }
         end
-        if context.after and card.ability.extra.goosed then
+        if context.discard and context.other_card.ability.goosed then
+            self:remove_goose_target(card)
+        end
+        if context.end_of_round and card.ability.extra.goosed then
             self:remove_goose_target(card)
         end
     end,

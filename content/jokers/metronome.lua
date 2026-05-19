@@ -19,7 +19,7 @@ Monarchy.Joker({
                 [card.ability.extra.current] = card.ability.extra[card.ability.extra.current]
             }
         end
-        if context.after then
+        if context.after and not context.blueprint then
             card.ability.extra.current = card.ability.extra.current == 'chips' and 'mult' or 'chips'
             return {
                 message = localize('monarchy_switched'),

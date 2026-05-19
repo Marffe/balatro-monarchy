@@ -20,8 +20,8 @@ Monarchy.Joker({
             end
         }))
     end,
-    loc_vars = function(self, info_queue, card)
-        return {vars = {card.ability.extra.gain, localize('monarchy_air_freshener_flavour_'..card.ability.extra.x_pos..card.ability.extra.y_pos)}}
+    loc_vars = function(self, info_queue, card) 
+        return {vars = {card.ability.extra.gain, localize('monarchy_air_freshener_flavour_'..(card.ability.extra.x_pos or 5)..(card.ability.extra.y_pos or 4))}}
     end,
     calculate = function(self, card, context)
         if context.setting_blind then

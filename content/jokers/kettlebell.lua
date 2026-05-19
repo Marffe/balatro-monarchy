@@ -7,7 +7,7 @@ Monarchy.Joker({
     discovered = false,
     blueprint_compat = true,
     eternal_compat = true,
-    perishable_compat = true,
+    perishable_compat = false,
     config = {extra = {mult = 0, gain = 5}},
     attributes = {'mult', 'scaling'},
     loc_vars = function(self, info_queue, card)
@@ -16,7 +16,6 @@ Monarchy.Joker({
     calculate = function(self, card, context)
         if context.starting_shop then
             card.ability.extra.no_bought = true
-            print('set')
             juice_card_until(card, function() return card.ability.extra.no_bought end)
         end
         if context.buying_card or context.open_booster then

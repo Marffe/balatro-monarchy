@@ -8,20 +8,24 @@ Monarchy.Joker({
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
-    config = {extra = {mult = 3, last_hand = 0}},
+    config = {extra = {mult = 6}},
     attributes = {'mult', 'hands'},
     loc_vars = function(self, info_queue, card)
-        return {vars = {card.ability.extra.mult, card.ability.extra.mult * (card.ability.extra.last_hand or 0)}}
+        return {vars = {card.ability.extra.mult}}
     end,
     calculate = function(self, card, context)
-        if context.after then
-            -- Vespertine Tracker
-            card.ability.extra.last_hand = #context.scoring_hand
-        end
-        if context.joker_main then
+        if context.individual and context.cardarea == G.play and G.GAME.current_round.hands_left == 0 then
+            card.ability.extra.juiced = false
             return {
-                mult = card.ability.extra.mult * card.ability.extra.last_hand
+                mult = card.ability.extra.mult
             }
+        end
+        if context.hand_drawn and G.GAME.current_round.hands_left == 1 and not card.ability.extra.juiced then
+            if not context.blueprint then
+                local eval = function() return G.GAME.current_round.hands_left == 1 end
+                card.ability.extra.juiced = true
+                juice_card_until(card, eval, true)
+            end
         end
     end,
 })
