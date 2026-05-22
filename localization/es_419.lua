@@ -159,8 +159,8 @@ local descriptions = {
             text = {
                 'Las {C:attention}Cartas anotadas{} tienen',
                 'una prob. de {C:green}#2# en #3#{} de',
-                'obtener una {C:attention}Mejora{} al azar',
-                'Por las siguientes {C:attention}#1#{} manos,',
+                'obtener una {C:attention}Mejora{} al azar.',
+                'Se consume en {C:attention}#1#{} manos,',
             }
         },
         gummy_bears_alt = {
@@ -231,7 +231,7 @@ local descriptions = {
         lightning_bottle = {
             name = 'Botella de Relámpago',
             text = {
-                'Las {C:attention}#1#s{} siempre se',
+                'Las {C:mult}#1#s{} siempre se',
                 'sacan en tu {C:attention}mano inicial{} y se',
                 '{C:attention}reactivan{} al ser {C:attention}anotadas{}'
             }
