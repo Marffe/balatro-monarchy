@@ -110,7 +110,7 @@ local descriptions = {
             name = 'Lata de Serpientes',
             text = {
                 'Otorga {C:blue}+#1#{} Fichas, {C:red}+#2#{} Multi',
-                'o{C:money}#3#{} en la {C:attention}primera mano{}',
+                'o {C:money}#3#{} en la {C:attention}primera mano{}',
                 'de la ronda'
             }
         },
