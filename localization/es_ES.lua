@@ -229,7 +229,7 @@ local descriptions = {
             }
         },
         lightning_bottle = {
-            name = 'Botella de Relámpago',
+            name = 'Relámpago Embotellado',
             text = {
                 'Las {C:mult}#1#s{} siempre se',
                 'sacan en tu {C:attention}mano inicial{} y se',
